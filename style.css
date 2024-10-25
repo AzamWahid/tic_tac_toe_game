@@ -33,6 +33,7 @@ nav ul {
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
     font-family: "Roboto", sans-serif;
+    position: relative;
 }
 
 .box {
@@ -42,8 +43,17 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 .box:hover {
-   background-color: rgb(242, 233, 250);
+    background-color: rgb(242, 233, 250);
+}
+
+.info {
+    font-size: 20px;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
 }
 
 .gameInfo {
@@ -52,19 +62,64 @@ nav ul {
 }
 
 .imgBox img {
-    display: none;
+    /* display: none; */
+    width: 0;
+    transition: width 1s ease-in-out;
 }
 
 
 .br-0 {
     border-right: 0;
 }
+
 .bl-0 {
     border-left: 0;
 }
+
 .bt-0 {
     border-top: 0;
 }
+
 .bb-0 {
     border-bottom: 0;
+}
+
+#reset {
+    margin: 0 25px;
+    padding: 2px 15px;
+    background: #d8ced8;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line {
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        margin-top: 34px;
+    }
+
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
 }
